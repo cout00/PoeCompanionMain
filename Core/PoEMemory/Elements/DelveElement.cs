@@ -5,6 +5,7 @@ using ExileCore.Shared.Cache;
 using ExileCore.Shared.Helpers;
 using GameOffsets.Native;
 using SharpDX;
+using RectangleF = SharpDX.RectangleF;
 
 namespace ExileCore.PoEMemory.Elements
 {

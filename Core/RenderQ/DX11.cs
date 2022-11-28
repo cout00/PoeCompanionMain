@@ -11,6 +11,7 @@ using SharpDX.Direct3D11;
 using SharpDX.DXGI;
 using SharpDX.Windows;
 using Buffer = SharpDX.Direct3D11.Buffer;
+using Color = SharpDX.Color;
 using Device = SharpDX.Direct3D11.Device;
 using Resource = SharpDX.Direct3D11.Resource;
 using Vector4 = System.Numerics.Vector4;

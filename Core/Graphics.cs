@@ -2,7 +2,10 @@ using ExileCore.RenderQ;
 using ExileCore.Shared.AtlasHelper;
 using ExileCore.Shared.Enums;
 using ExileCore.Shared.Helpers;
+using ImGuiNET;
 using SharpDX;
+using Color = SharpDX.Color;
+using RectangleF = SharpDX.RectangleF;
 using Vector2N = System.Numerics.Vector2;
 
 namespace ExileCore
@@ -110,7 +113,7 @@ namespace ExileCore
             ImGuiRender.LowLevelApi.AddLine(p1.ToVector2Num(), p2.ToVector2Num(), color.ToImgui(), borderWidth);
         }
 
-        public void DrawFrame(Vector2N p1, Vector2N p2, Color color, float rounding, int thickness, int flags)
+        public void DrawFrame(Vector2N p1, Vector2N p2, Color color, float rounding, int thickness, ImDrawFlags flags)
         {
             ImGuiRender.LowLevelApi.AddRect(p1, p2, color.ToImgui(), rounding, flags, thickness);
         }
@@ -180,7 +183,7 @@ namespace ExileCore
             DrawBox(rect.TopLeft.ToVector2Num(), rect.BottomRight.ToVector2Num(), color, rounding);
         }
 
-        public void DrawFrame(RectangleF rect, Color color, float rounding, int thickness, int flags)
+        public void DrawFrame(RectangleF rect, Color color, float rounding, int thickness, ImDrawFlags flags)
         {
             DrawFrame(rect.TopLeft.ToVector2Num(), rect.BottomRight.ToVector2Num(), color, rounding, thickness, flags);
         }

@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using SharpDX;
+using RectangleF = SharpDX.RectangleF;
 
 namespace ExileCore.Shared.AtlasHelper
 {

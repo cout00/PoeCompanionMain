@@ -7,6 +7,7 @@ using SharpDX;
 using ExileCore.Shared.Helpers;
 using ExileCore.Shared.Attributes;
 using Newtonsoft.Json;
+using Color = SharpDX.Color;
 
 namespace ExileCore.Shared.PluginAutoUpdate.Settings
 {

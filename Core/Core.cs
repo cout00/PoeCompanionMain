@@ -45,7 +45,6 @@ namespace ExileCore
         private readonly DebugInformation _menuDebugInformation;
         private readonly DebugInformation _parallelCoroutineTickDebugInformation;
         private readonly SettingsContainer _settings;
-        private readonly SoundController _soundController;
         private readonly Stopwatch _sw = Stopwatch.StartNew();
         private readonly DebugInformation _totalDebugInformation;
         private readonly List<(PluginWrapper plugin, Job job)> WaitingJobs = new List<(PluginWrapper, Job)>(20);
@@ -124,16 +123,6 @@ namespace ExileCore
                     _dx11 = new DX11(form, _coreSettings);
                 }
 
-                try
-                {
-                    _soundController = new SoundController("Sounds");
-                    _coreSettings.Volume.OnValueChanged += (sender, i) => { _soundController.SetVolume(i / 100f); };
-                }
-                catch (Exception e)
-                {
-                    DebugWindow.LogError($"Core -> Loading SoundController failed.");
-                    DebugWindow.LogError($"Core -> {e}");
-                }
 
                 _coreSettings.VSync.OnValueChanged += (obj, b) => { _dx11.VSync = _coreSettings.VSync.Value; };
                 Graphics = new Graphics(_dx11, _coreSettings);
@@ -302,7 +291,7 @@ namespace ExileCore
             {
                 if (_memory != null)
                 {
-                    GameController = new GameController(_memory, _soundController, _settings, MultiThreadManager);
+                    GameController = new GameController(_memory, _settings, MultiThreadManager);
                     lastClientBound = _form.Bounds;
 
                     using (new PerformanceTimer("Plugin loader"))
@@ -568,8 +557,8 @@ namespace ExileCore
         public void FixImGui()
         {
             WinApi.SetNoTransparent(_form.Handle);
-            ImGui.CaptureMouseFromApp();
-            ImGui.CaptureKeyboardFromApp();
+            //ImGui.CaptureMouseFromApp();
+            //ImGui.CaptureKeyboardFromApp();
         }
     }
 }

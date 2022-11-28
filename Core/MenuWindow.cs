@@ -13,6 +13,7 @@ using ExileCore.Shared.VersionChecker;
 using ImGuiNET;
 using JM.LinqFaster;
 using SharpDX;
+using Color = SharpDX.Color;
 using Vector2 = System.Numerics.Vector2;
 
 namespace ExileCore

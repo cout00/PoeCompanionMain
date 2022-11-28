@@ -19,8 +19,10 @@ using SharpDX.DXGI;
 using SharpDX.Mathematics.Interop;
 using SharpDX.Windows;
 using Buffer = SharpDX.Direct3D11.Buffer;
+using Color = SharpDX.Color;
 using MapFlags = SharpDX.Direct3D11.MapFlags;
 using Rectangle = System.Drawing.Rectangle;
+using RectangleF = SharpDX.RectangleF;
 using Vector2N = System.Numerics.Vector2;
 
 namespace ExileCore.RenderQ

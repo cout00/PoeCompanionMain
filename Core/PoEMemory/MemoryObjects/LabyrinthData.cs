@@ -3,6 +3,7 @@ using System.Linq;
 using ExileCore.PoEMemory.FilesInMemory;
 using ExileCore.Shared.Interfaces;
 using SharpDX;
+using Color = SharpDX.Color;
 
 namespace ExileCore.PoEMemory.MemoryObjects
 {

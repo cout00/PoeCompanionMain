@@ -8,6 +8,7 @@ using ExileCore.Shared.Cache;
 using ExileCore.Shared.Enums;
 using GameOffsets;
 using SharpDX;
+using Color = SharpDX.Color;
 
 namespace ExileCore.PoEMemory.Components
 {

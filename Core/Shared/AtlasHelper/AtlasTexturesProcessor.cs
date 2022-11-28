@@ -3,6 +3,7 @@ using System.Drawing.Printing;
 using System.IO;
 using Newtonsoft.Json;
 using SharpDX;
+using RectangleF = SharpDX.RectangleF;
 
 namespace ExileCore.Shared.AtlasHelper
 {

@@ -10,6 +10,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Color = SharpDX.Color;
 
 namespace ExileCore.Shared.PluginAutoUpdate
 {
@@ -37,6 +38,15 @@ namespace ExileCore.Shared.PluginAutoUpdate
             PluginLoadTime.TryAdd(info.FullName, Stopwatch.StartNew());
 
             return TryLoadPlugin(assembly, info);
+        }
+
+
+        public List<PluginWrapper> LoadByName(string name) {
+            var currentDir = AppDomain.CurrentDomain.BaseDirectory;
+            var dllPath = Path.Combine(currentDir, $"{name}.dll");
+            PluginLoadTime.TryAdd(dllPath, Stopwatch.StartNew());
+            var assembly = Assembly.LoadFrom(dllPath);
+            return TryLoadPlugin(assembly, new DirectoryInfo(dllPath));
         }
 
         private Assembly LoadAssembly(DirectoryInfo dir)

@@ -4,7 +4,6 @@ using ExileCore.Shared.Cache;
 using ExileCore.Shared.Helpers;
 using GameOffsets;
 using JM.LinqFaster;
-using ProcessMemoryUtilities.Memory;
 
 namespace ExileCore.PoEMemory.Components
 {

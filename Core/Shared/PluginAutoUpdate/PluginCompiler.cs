@@ -1,8 +1,4 @@
-﻿using Microsoft.Build.Evaluation;
-using Microsoft.Build.Execution;
-using Microsoft.Build.Framework;
-using Microsoft.Build.Logging;
-using Microsoft.CodeDom.Providers.DotNetCompilerPlatform;
+﻿using Microsoft.CSharp;
 using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
@@ -14,19 +10,19 @@ using System.Threading.Tasks;
 
 namespace ExileCore.Shared.PluginAutoUpdate
 {
-    public class PluginCompilerSettings : ICompilerSettings
-    {
-        public PluginCompilerSettings(DirectoryInfo exileApiRootDirectory)
-        {
-            if (exileApiRootDirectory == null) throw new ArgumentNullException(nameof(exileApiRootDirectory));
-            var roslynDir = exileApiRootDirectory.GetDirectories().Single(d => d.Name == "roslyn");
-            _roslynCscExe = roslynDir.GetFiles().Single(f => f.Name == "csc.exe");
-        }
+    //public class PluginCompilerSettings : ICompilerSettings
+    //{
+    //    public PluginCompilerSettings(DirectoryInfo exileApiRootDirectory)
+    //    {
+    //        if (exileApiRootDirectory == null) throw new ArgumentNullException(nameof(exileApiRootDirectory));
+    //        var roslynDir = exileApiRootDirectory.GetDirectories().Single(d => d.Name == "roslyn");
+    //        _roslynCscExe = roslynDir.GetFiles().Single(f => f.Name == "csc.exe");
+    //    }
 
-        private FileInfo _roslynCscExe { get; }
-        public string CompilerFullPath => _roslynCscExe.FullName;
-        public int CompilerServerTimeToLive => 900;
-    }
+    //    private FileInfo _roslynCscExe { get; }
+    //    public string CompilerFullPath => _roslynCscExe.FullName;
+    //    public int CompilerServerTimeToLive => 900;
+    //}
 
     public class PluginCompiler : IPluginCompiler
     {
@@ -61,8 +57,8 @@ namespace ExileCore.Shared.PluginAutoUpdate
                 DebugWindow.LogError($"{pluginName} -> Dependency is missing: {missingDependency.name}");
             }
 
-            var compilerSettings = new PluginCompilerSettings(exileApiRootDirectory);
-            using (CodeDomProvider provider = new CSharpCodeProvider(compilerSettings))
+            //var compilerSettings = new PluginCompilerSettings(exileApiRootDirectory);
+            using (CodeDomProvider provider = new CSharpCodeProvider())
             {
                 try
                 {

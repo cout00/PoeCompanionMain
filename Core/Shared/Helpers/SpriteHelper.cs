@@ -1,5 +1,6 @@
 using ExileCore.Shared.Enums;
 using SharpDX;
+using RectangleF = SharpDX.RectangleF;
 
 namespace ExileCore.Shared.Helpers
 {

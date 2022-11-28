@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Color = SharpDX.Color;
 
 namespace ExileCore.Shared.PluginAutoUpdate.Settings
 {

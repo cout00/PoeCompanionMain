@@ -7,6 +7,8 @@ using ExileCore.Shared.Interfaces;
 using GameOffsets;
 using GameOffsets.Native;
 using SharpDX;
+using Color = SharpDX.Color;
+using RectangleF = SharpDX.RectangleF;
 
 namespace ExileCore.Shared.Helpers
 {

@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using Serilog;
 using SharpDX;
 using SharpDX.Windows;
+using Color = SharpDX.Color;
 
 namespace Loader
 {
@@ -61,7 +62,7 @@ namespace Loader
 
         private void LoadCoreDll()
         {
-            _coreDll = Assembly.Load("ExileCore");
+            _coreDll = Assembly.LoadFrom("ExileCore.dll");
         }
 
         private void ExecuteCommand(string command)

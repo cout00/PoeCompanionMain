@@ -7,6 +7,7 @@ using ExileCore.Shared.AtlasHelper;
 using ExileCore.Shared.Interfaces;
 using Newtonsoft.Json;
 using SharpDX;
+using Color = SharpDX.Color;
 
 namespace ExileCore
 {

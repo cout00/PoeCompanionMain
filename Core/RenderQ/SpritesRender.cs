@@ -11,7 +11,9 @@ using SharpDX.WIC;
 using SharpDX.Windows;
 using Bitmap = System.Drawing.Bitmap;
 using Buffer = SharpDX.Direct3D11.Buffer;
+using Color = SharpDX.Color;
 using MapFlags = SharpDX.Direct3D11.MapFlags;
+using RectangleF = SharpDX.RectangleF;
 
 namespace ExileCore.RenderQ
 {

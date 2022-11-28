@@ -2,6 +2,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using SharpDX;
+using Color = SharpDX.Color;
 
 namespace ExileCore.Shared.Cache
 {

@@ -1,4 +1,5 @@
 using SharpDX;
+using Color = SharpDX.Color;
 
 namespace ExileCore.Shared.Static
 {

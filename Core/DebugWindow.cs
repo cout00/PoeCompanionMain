@@ -4,6 +4,8 @@ using ExileCore.Shared;
 using ExileCore.Shared.Helpers;
 using ImGuiNET;
 using SharpDX;
+using Color = SharpDX.Color;
+using RectangleF = SharpDX.RectangleF;
 using Vector2 = System.Numerics.Vector2;
 using Vector4 = System.Numerics.Vector4;
 

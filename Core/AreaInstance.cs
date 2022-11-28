@@ -1,6 +1,7 @@
 using System;
 using ExileCore.PoEMemory.MemoryObjects;
 using SharpDX;
+using Color = SharpDX.Color;
 
 namespace ExileCore
 {

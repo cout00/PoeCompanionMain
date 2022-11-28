@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using SharpDX;
+using RectangleF = SharpDX.RectangleF;
 
 namespace ExileCore.Shared.Helpers
 {

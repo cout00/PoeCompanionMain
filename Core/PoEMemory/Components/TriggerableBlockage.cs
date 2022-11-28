@@ -1,4 +1,5 @@
 using SharpDX;
+using Point = SharpDX.Point;
 
 namespace ExileCore.PoEMemory.Components
 {

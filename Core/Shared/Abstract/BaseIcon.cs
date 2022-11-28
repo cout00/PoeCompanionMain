@@ -6,6 +6,8 @@ using ExileCore.Shared.Enums;
 using ExileCore.Shared.Helpers;
 using ExileCore.Shared.Interfaces;
 using SharpDX;
+using Color = SharpDX.Color;
+using RectangleF = SharpDX.RectangleF;
 
 namespace ExileCore.Shared.Abstract
 {

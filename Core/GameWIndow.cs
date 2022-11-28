@@ -3,7 +3,9 @@ using System.Diagnostics;
 using ExileCore.Shared;
 using ExileCore.Shared.Cache;
 using SharpDX;
+using Point = SharpDX.Point;
 using Rectangle = System.Drawing.Rectangle;
+using RectangleF = SharpDX.RectangleF;
 
 namespace ExileCore
 {

@@ -7,9 +7,10 @@
     <AssemblyTitle>Core</AssemblyTitle>
     <Product>Core</Product>
     <Copyright>Copyright ©  2018</Copyright>
-    <OutputPath>..\..\PoeHelper\</OutputPath>
+    <OutputPath>..\..\PoeCompanionBin\</OutputPath>
     <PlatformTarget>x64</PlatformTarget>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -18,22 +19,16 @@
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
-    <PackageReference Include="Fody" Version="6.0.0">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="InlineIL.Fody" Version="1.3.2" />
-    <PackageReference Include="LibGit2Sharp" Version="0.26.2" />
-    <PackageReference Include="LibGit2Sharp.NativeBinaries" Version="2.0.306" />
+    <Compile Remove="CommandExecutor_NetCore.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ImGui.NET" Version="1.88.0" />
     <PackageReference Include="LinqFaster" Version="1.0.0" />
-    <PackageReference Include="Microsoft.Build" Version="15.1.0" />
-    <PackageReference Include="Microsoft.Build.Framework" Version="15.1.0" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Setup.Configuration.Interop" Version="1.16.30">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
     <PackageReference Include="morelinq" Version="3.2.0" />
-    <PackageReference Include="MouseKeyHook" Version="5.6.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="PoeFilterParser" Version="1.0.58" />
     <PackageReference Include="ProcessMemoryUtilities.Net" Version="1.2.0" />
@@ -44,24 +39,14 @@
     <PackageReference Include="SharpDX.Desktop" Version="4.2.0" />
     <PackageReference Include="SharpDX.Direct2D1" Version="4.2.0" />
     <PackageReference Include="SharpDX.Direct3D11" Version="4.2.0" />
-    <PackageReference Include="SharpDX.DXGI" Version="4.2.0" />
     <PackageReference Include="SharpDX.Mathematics" Version="4.2.0" />
-    <PackageReference Include="SharpDX.XAudio2" Version="4.2.0" />
-    <PackageReference Include="System.Memory" Version="4.5.4" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="ImGui.NET, Version=1.71.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\deps\ImGui.NET.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Caching" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cimgui.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <PackageReference Include="System.Memory" Version="4.5.5" />
+    <PackageReference Include="System.Runtime.Caching" Version="7.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GameOffsets\GameOffsets.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\michail\.nuget\packages\imgui.net\1.88.0\build\net40\..\..\runtimes\win-x64\native\cimgui.dll" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 ﻿using SharpDX;
+using RectangleF = SharpDX.RectangleF;
 
 namespace ExileCore.PoEMemory.Elements.InventoryElements
 {

@@ -8,6 +8,7 @@ using ExileCore.Shared.Interfaces;
 using ExileCore.Shared.Nodes;
 using JM.LinqFaster;
 using SharpDX;
+using Color = SharpDX.Color;
 
 namespace ExileCore.Shared
 {

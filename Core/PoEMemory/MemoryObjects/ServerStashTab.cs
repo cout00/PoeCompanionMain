@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Net.Configuration;
 using ExileCore.Shared.Cache;
 using ExileCore.Shared.Enums;
 using ExileCore.Shared.Helpers;
 using GameOffsets;
 using SharpDX;
+using Color = SharpDX.Color;
 
 namespace ExileCore.PoEMemory.MemoryObjects
 {

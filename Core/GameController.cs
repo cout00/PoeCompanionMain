@@ -9,6 +9,7 @@ using ExileCore.Shared.Cache;
 using ExileCore.Shared.Enums;
 using ExileCore.Shared.Interfaces;
 using SharpDX;
+using RectangleF = SharpDX.RectangleF;
 
 namespace ExileCore
 {
@@ -39,12 +40,11 @@ namespace ExileCore
         private bool IsForeGroundLast;
         public PluginBridge PluginBridge;
 
-        public GameController(Memory memory, SoundController soundController, SettingsContainer settings,
+        public GameController(Memory memory, SettingsContainer settings,
             MultiThreadManager multiThreadManager)
         {
             _settings = settings.CoreSettings;
             Memory = memory;
-            SoundController = soundController;
             Settings = settings;
             MultiThreadManager = multiThreadManager;
 
@@ -124,7 +124,6 @@ namespace ExileCore
         public PluginPanel LeftPanel { get; }
         public PluginPanel UnderPanel { get; }
         public IMemory Memory { get; }
-        public SoundController SoundController { get; }
         public SettingsContainer Settings { get; }
         public MultiThreadManager MultiThreadManager { get; }
         public EntityListWrapper EntityListWrapper { get; }

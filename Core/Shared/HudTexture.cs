@@ -1,4 +1,6 @@
 ﻿using SharpDX;
+using Color = SharpDX.Color;
+using RectangleF = SharpDX.RectangleF;
 
 namespace ExileCore.Shared
 {

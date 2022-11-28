@@ -1,6 +1,7 @@
 using System;
 using Newtonsoft.Json;
 using SharpDX;
+using Color = SharpDX.Color;
 
 namespace ExileCore.Shared.Nodes
 {
